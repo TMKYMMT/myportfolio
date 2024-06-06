@@ -81,11 +81,14 @@
 
 
 
-<div id="contact">
+<div class="contact-wrap">
   <div class="contact-form">
     <p class="title">Contact</p>
 
-    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfssy5pOtZ_fUamI0_yjSElc-o2YY0ePdgL7octsl6sw5KFNw/formResponse" method="post">
+    <form id="contact" method="post" action="https://docs.google.com/forms/
+    u/0/d/e/1FAIpQLSfssy5pOtZ_fUamI0_yjSElc-o2YY0ePdgL7octsl6
+    sw5KFNw/formResponse"  target="hidden_iframe"onsubmit="submitted=true;">
+
       <div class="item">
         <label class="label">お名前</label>
         <input type="text" class="input" name="entry.990870201"/>
@@ -106,6 +109,17 @@
     </div>
 
     </form>
+
+    <script type="text/javascript">
+      var submitted = false;
+    </script>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted)  {window.location='thankspage.html';}"
+    ></iframe>
+
   </div>
 </div>
 
